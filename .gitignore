@@ -13,3 +13,5 @@ adni_params_cp.json
 adni_params_ucl_gmm_large_effect_sizes.json
 real_sh_files/
 .env 
+!high_dimensional/
+!high_dimensional/data/
