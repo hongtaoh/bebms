@@ -1,0 +1,15 @@
+{
+    "runtime": 131.9721131324768,
+    "First == Best": true,
+    "First == Pickle ML": true,
+    "Best == Pickle ML": true,
+    "tau": 0.49242424242424243,
+    "tau_argsort": 0.3560606060606061,
+    "subtype_acc": 0.028040727033227398,
+    "mean_stage_healthy": 2.644,
+    "tau_mcmc": 0.49242424242424243,
+    "tau_argsort_mcmc": 0.3560606060606061,
+    "subtype_acc_mcmc": 0.019478590622442025,
+    "mean_stage_healthy_mcmc": 2.652,
+    "true_n_subtypes": 2
+}

@@ -1,0 +1,15 @@
+deprecated/
+logs/
+data.tar.gz
+env.tar.gz
+data/
+error_logs/
+ADNIMERGE.csv
+adni.csv
+TODO.md
+updatepkg.sh
+Write.md 
+adni_params_cp.json
+adni_params_ucl_gmm_large_effect_sizes.json
+real_sh_files/
+.env 

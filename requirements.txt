@@ -1,0 +1,5 @@
+ymal
+tqdm 
+git+https://github.com/noxtoby/awkde
+git+https://github.com/ucl-pond/kde_ebm
+git+https://github.com/ucl-pond/pySuStaIn

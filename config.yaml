@@ -1,0 +1,44 @@
+N_VARIANTS: 10
+JS: [300, 500, 1000, 1500]
+RS: [0.25, 0.5, 0.75]
+N_MCMC: 10000
+N_MCMC_SUSTAIN: 100_000 # 10^5
+MCMC_SEED: 42
+N_SHUFFLE: 2
+N_SUBTYPE_SHUFFLE: 2
+N_STARTPOINTS: 25
+BURN_IN: 500
+THINNING: 1
+GEN_SEED: 53
+TEMPERATURE_LO: 0.01
+TEMPERATURE_HI: 0.5
+GEN_DIRICHLET_PRIORS: [0.1, 2, 5, 20]
+PRIOR_N: 1
+PRIOR_V: 1
+
+SUBTYPE_LENGTH_LO: 10 # the lowest possible number of diseased participant any subtype can have
+
+Z_SCORE_NORM: False 
+
+ALGO_NAMES:
+  - pysubebm 
+  - pysubebm_with_labels
+  - sustain_gmm
+  - sustain_kde
+N_SUB_LO: 1
+N_SUB_HI: 5
+OUTPUT_DIR: 'algo_results'
+SUSTAIN_EVAL_N_FOLD: 5
+EXPERIMENT_NAMES:
+  - sn_kjOrdinalDM_xnjNormal                  # Experiment 1: Ordinal k_j, Dirichlet-Multinomial stage prior, Normal biomarker distributions
+  - sn_kjOrdinalDM_xnjNonNormal               # Experiment 2: Ordinal k_j, Dirichlet-Multinomial stage prior, Non-Normal biomarker distributions
+  - sn_kjOrdinalUniform_xnjNormal             # Experiment 3: Ordinal k_j, Uniform stage prior, Normal biomarker distributions
+  - sn_kjOrdinalUniform_xnjNonNormal          # Experiment 4: Ordinal k_j, Uniform stage prior, Non-Normal biomarker distributions
+  - sn_kjContinuousUniform_sigmoid            # Experiment 5: Continuous k_j (Uniform distribution), sigmoid measurement model
+  - sn_kjContinuousBeta_sigmoid               # Experiment 6: Continuous k_j (Beta distribution), sigmoid measurement model
+  - sn_kjContinuousUniform_xnjNormal          # Experiment 7: Continuous k_j (Uniform distribution), Normal biomarker distributions
+  - sn_kjContinuousUniform_xnjNonNormal       # Experiment 8: Continuous k_j (Uniform distribution), Non-Normal biomarker distributions
+  - sn_kjContinuousBeta_xnjNormal             # Experiment 9: Continuous k_j (Beta distribution), Normal biomarker distributions
+  - sn_kjContinuousBeta_xnjNonNormal          # Experiment 10: Continuous k_j (Beta distribution), Non-Normal biomarker distributions
+  - xiNearNormal_kjContinuousBeta_sigmoid     # Experiment 11: Continuous xi (near-normal), Continuous k_j (Beta), sigmoid measurement model
+  - xiNearNormal_kjContinuousBeta_xnjNormal   # Experiment 12: Continuous xi (near-normal), Continuous k_j (Beta), EBM framework with Normal biomarker distributions

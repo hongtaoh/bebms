@@ -1,0 +1,30 @@
+Executable = run_mlhc.sh
+Arguments = $(fname)
+
+Initialdir = /home/hhao9/subtypes
+
+# Transfer necessary files to the compute node
+transfer_input_files = run_mlhc.py, run_mlhc.sh, all_combinations.txt, run.py, true_order_and_stages.json, config.yaml
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_output_files = logs, algo_results
+
+Log = logs/eval_$(fname).log
+Error = logs/eval_$(fname).err
+Output = logs/eval_$(fname).out
+
+request_cpus = 2
+request_memory = 8GB
+request_disk = 8GB
+
+requirements = (HasChtcStaging == True)
+
++TransferAttempts = 5
+
+priority = 500
+
+# Add these to ensure home directory exists
++WantHome = true
++WantRemoteIO = true
+
+queue fname from all_combinations.txt
