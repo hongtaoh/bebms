@@ -6,6 +6,21 @@ Note that the data generation and experiments are conducted on a high-performanc
 
 Many plots of our paper are available on Observable: [@hongtaoh/subtypes-results](https://observablehq.com/@hongtaoh/subtypes-results).
 
+## Cite this paper
+
+```
+@inproceedings{Hao2025JointProgression,
+  author    = {Hongtao Hao and Joseph L. Austerweil},
+  title     = {Bayesian Event-Based Model for Disease Subtype and Stage Inference},
+  booktitle = {Proceedings of the 5th Machine Learning for Health Symposium},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {297},
+  pages     = {??--??}, % Page numbers are not provided in the image, so I've left a placeholder
+  year      = {2025},
+  publisher = {PMLR},
+}
+```
+
 ## Installation and Setup
 
 ```sh
