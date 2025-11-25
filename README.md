@@ -15,7 +15,7 @@ Many plots of our paper are available on Observable: [@hongtaoh/subtypes-results
   booktitle = {Proceedings of the 5th Machine Learning for Health Symposium},
   series    = {Proceedings of Machine Learning Research},
   volume    = {297},
-  pages     = {??--??}, % Page numbers are not provided in the image, so I've left a placeholder
+  pages     = {??--??}, % Page numbers are not provided now, will add later. 
   year      = {2025},
   publisher = {PMLR},
 }
