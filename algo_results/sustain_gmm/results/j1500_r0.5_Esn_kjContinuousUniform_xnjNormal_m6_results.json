@@ -1,5 +1,5 @@
 {
-    "runtime": 815.5469851493835,
+    "runtime": 1163.3596425056458,
     "First == Best": false,
     "First == Pickle ML": true,
     "Best == Pickle ML": false,
@@ -7,9 +7,9 @@
     "tau_argsort": 0.39015151515151514,
     "subtype_acc": 0.04951461636103166,
     "mean_stage_healthy": 2.009333333333333,
-    "tau_mcmc": 0.36742424242424243,
-    "tau_argsort_mcmc": 0.39015151515151514,
-    "subtype_acc_mcmc": 0.048757811539787324,
-    "mean_stage_healthy_mcmc": 2.172,
+    "tau_mcmc": 0.38257575757575757,
+    "tau_argsort_mcmc": 0.3901515151515152,
+    "subtype_acc_mcmc": 0.048699454655643286,
+    "mean_stage_healthy_mcmc": 2.1266666666666665,
     "true_n_subtypes": 4
 }

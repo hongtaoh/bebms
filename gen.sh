@@ -1,3 +1,4 @@
+rm -rf data
 rm -rf /staging/hhao9/subtypes_data.tar.gz
 rm true_order_and_stages.json
 python3 gen.py

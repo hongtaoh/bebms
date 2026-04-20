@@ -14,7 +14,7 @@ Error = logs/eval_$(fname).err
 Output = logs/eval_$(fname).out
 
 request_cpus = 2
-request_memory = 8GB
+request_memory = 16GB
 request_disk = 8GB
 
 requirements = (HasChtcStaging == True)

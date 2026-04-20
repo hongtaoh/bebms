@@ -2,7 +2,7 @@
     "with_labels": 0,
     "burn_in": 500,
     "thinning": 1,
-    "runtime": 91.70609450340271,
+    "runtime": 167.54937410354614,
     "healthy_ratio": 0.24749163879598662,
     "max_log_likelihood": -651.5430800263794,
     "kendalls_tau": 0.34090909090909094,

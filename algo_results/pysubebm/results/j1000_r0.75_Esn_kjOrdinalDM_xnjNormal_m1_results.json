@@ -2,7 +2,7 @@
     "with_labels": 0,
     "burn_in": 500,
     "thinning": 1,
-    "runtime": 288.51942205429077,
+    "runtime": 296.4982759952545,
     "healthy_ratio": 0.75,
     "max_log_likelihood": 3039.3280668961356,
     "kendalls_tau": 0.17045454545454547,
@@ -1016,5 +1016,5 @@
     "correct_bool": 0,
     "absolute_error": 1,
     "relative_error": 1,
-    "runtime_cross_validation": 4579.127514839172
+    "runtime_cross_validation": 4408.326640129089
 }

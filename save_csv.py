@@ -79,6 +79,10 @@ def main():
     failed_files = []
     records = []
 
+    DATA_DIR = 'data'
+
+    print_num = 0
+
     # Process all algorithms
     for algo in tqdm(ALGONAMES, desc="Processing algorithms"):
         algo_dir = os.path.join(OUTPUT_DIR, algo, "results")
@@ -90,14 +94,18 @@ def main():
         # Process all result files
         files = [f for f in os.listdir(algo_dir) if f.endswith('_results.json')]
         for fname in tqdm(files, desc=f"{algo}", leave=False):
+            fname_clean = fname.replace("_results.json", "")
+            data_path = os.path.join(DATA_DIR, fname_clean + ".csv")
             metadata = true_order_and_stages[fname.replace('_results.json', '')]
             n_subtypes = metadata['N_SUB']
             mallows_temperature=metadata['TEMPERATURE']
             kendalls_w = metadata['CONCENTRATION']
             true_orderings = np.array(metadata['TRUE_ORDERINGS'])
             true_subtypes = np.array(metadata['TRUE_SUBTYPE_ASSIGNMENTS'])
-            true_stages = np.array(metadata['TRUE_STAGE_ASSIGNMENTS'])
-            healthy_mask = (true_stages == 0)
+            # true_stages = np.array(metadata['TRUE_STAGE_ASSIGNMENTS'])
+            data_df = pd.read_csv(data_path)
+            diseased_arr = np.array(data_df.diseased)
+            healthy_mask = (diseased_arr == 0)
             diseased_mask = (healthy_mask == 0)
             data_size = len(true_subtypes)
 
@@ -160,8 +168,10 @@ def main():
                 if algo == 'pysubebm':
                     temp_algo = 'Random Guessing'
                     estimated_orderings = np.array([rng.permutation(np.arange(12)) for _ in range(n_subtypes)])
-                    ml_subtype = rng.integers(1, n_subtypes+1, size=data_size) 
-                    ml_stage = rng.integers(0, 13, size=data_size)
+                    # Per-file independent RNG instead of shared rng
+                    file_rng = np.random.default_rng(abs(hash(fname)) % (2**32))
+                    ml_subtype = file_rng.integers(1, n_subtypes+1, size=data_size) 
+                    ml_stage = file_rng.integers(0, 13, size=data_size)
                     n = len(estimated_orderings)
                     dist = np.zeros((n, n))
                     # i can safely use the sequence results because they are the indices of the fixed input biomarker array!
