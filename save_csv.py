@@ -185,9 +185,13 @@ def main():
                     # Calculate the matched Kendall's Tau
                     kendalls_tau = dist[estimated_indices, true_indices].mean()
 
-                    ml_subtypes = ml_subtype[diseased_mask]
-                    true_subtype_assignments = true_subtypes[diseased_mask]
-                    subtype_acc = adjusted_rand_score(true_subtype_assignments, ml_subtypes)
+                    if n_subtypes > 1:
+                        ml_subtypes = ml_subtype[diseased_mask]
+                        true_subtype_assignments = true_subtypes[diseased_mask]
+                        subtype_acc = adjusted_rand_score(true_subtype_assignments, ml_subtypes)
+                    else:
+                        subtype_acc = np.nan
+                    
                     mean_stage_healthy = np.mean(ml_stage[healthy_mask])
                     estimated_n_subtype = rng.integers(1, 7, size = 1)
                     absolute_error_n_subtypes = abs(estimated_n_subtype[0] - n_subtypes)
@@ -213,11 +217,17 @@ def main():
                     })
                 if 'pysubebm' in algo:
                     kendalls_tau = data['kendalls_tau']
-                    subtype_acc = data['subtype_acc']
+                    if n_subtypes > 1:
+                        subtype_acc = data['subtype_acc']
+                    else:
+                        subtype_acc = np.nan 
                     mean_stage_healthy = data['mean_stage_healthy']
                 else:
                     kendalls_tau = data['tau_argsort']
-                    subtype_acc = data['subtype_acc_mcmc']
+                    if n_subtypes > 1:
+                        subtype_acc = data['subtype_acc_mcmc']
+                    else:
+                        subtype_acc = np.nan 
                     mean_stage_healthy = data['mean_stage_healthy_mcmc']
                 runtime = data['runtime']/60
                 if E_num == 1:

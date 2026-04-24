@@ -1,6 +1,6 @@
 # Reproducible codes for BEBMS
 
-This repository contains codes for the ML4H (2025) submission of *Bayesian Event-Based Model for Disease Subtype and Stage Inference*.
+This repository contains codes for the ML4H (2025) submission of [*Bayesian Event-Based Model for Disease Subtype and Stage Inference*](https://arxiv.org/pdf/2512.03467).
 
 Note that the data generation and experiments are conducted on a high-performance computing platform (CHTC at the University of Wisconsin--Madison) due to the large number of jobs to run. You can, however, modify relevant files to run on personal computers.
 
