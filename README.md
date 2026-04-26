@@ -9,7 +9,7 @@ Many plots of our paper are available on Observable: [@hongtaoh/subtypes-results
 ## Cite this paper
 
 ```
-@inproceedings{Hao2025JointProgression,
+@inproceedings{Hao2025bayesian,
   author    = {Hongtao Hao and Joseph L. Austerweil},
   title     = {Bayesian Event-Based Model for Disease Subtype and Stage Inference},
   booktitle = {Proceedings of the 5th Machine Learning for Health Symposium},
