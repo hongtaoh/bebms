@@ -20,6 +20,12 @@ Many plots of our paper are available on Observable: [@hongtaoh/subtypes-results
 }
 ```
 
+
+>Figures 2 and 6--10 in the paper were generated from `all_results_nov2025.csv`, which preserves the results available in the repository's initial November 2025 commit. The current `all_results.csv` was regenerated after an April 2026 rerun overwrote many raw result files, so some stochastic estimates and runtimes do not exactly match those figures; this does not reflect a change to the evaluated methods or the paper's main conclusions. Figures 12--14 in arXiv v2 use the later rerun.
+
+>Correction: In Figure 9, Random Guessing sampled the estimated subtype count from 1--6, whereas all evaluated models considered 1--5 subtypes. Under uniform guessing from 1--5, the expected MAE is 1.65 rather than the reported 1.92. This does not affect any fitted-model results or the paper's principal conclusions.
+
+
 ## Installation and Setup
 
 ```sh
@@ -99,11 +105,7 @@ Run `bash run.sh` to run the experiments. All results will be saved to the folde
 
 Run `python3 save_csv.py`. You'll get all the results as `all_results.csv`.
 
-Figures 2 and 6--10 in the paper were generated from `all_results_nov2025.csv`, which preserves the results available in the repository's initial November 2025 commit. The current `all_results.csv` was regenerated after an April 2026 rerun overwrote many raw result files, so some stochastic estimates and runtimes do not exactly match those figures; this does not reflect a change to the evaluated methods or the paper's main conclusions. Figures 12--14 in arXiv v2 use the later rerun.
-
-Correction: In Figure 9, Random Guessing sampled the estimated subtype count from 1--6, whereas all evaluated models considered 1--5 subtypes. Under uniform guessing from 1--5, the expected MAE is 1.65 rather than the reported 1.92. This does not affect any fitted-model results or the paper's principal conclusions.
-
-For data analysis and visualizations, we used Observable. Since we cannot anonymize the notebooks, we are not able to share the codes at this point for the reviewing purpose.
+For data analysis and visualizations, we used Observable.
 
 ## How to analyze the real-world ADNI results
 
